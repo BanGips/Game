@@ -13,6 +13,7 @@
 		2C88C8B826066BA6006D9562 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C88C8B626066BA6006D9562 /* Main.storyboard */; };
 		2C88C8BA26066BA6006D9562 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C88C8B926066BA6006D9562 /* Assets.xcassets */; };
 		2C88C8C726067467006D9562 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C88C8C626067467006D9562 /* Background.swift */; };
+		2CF95F27260778D200C18D27 /* Island.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF95F26260778D200C18D27 /* Island.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		2C88C8B926066BA6006D9562 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C88C8BB26066BA6006D9562 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C88C8C626067467006D9562 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
+		2CF95F26260778D200C18D27 /* Island.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Island.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				2C88C8B226066BA6006D9562 /* GameScene.swift */,
 				2C88C8B426066BA6006D9562 /* GameViewController.swift */,
 				2C88C8C626067467006D9562 /* Background.swift */,
+				2CF95F26260778D200C18D27 /* Island.swift */,
 				2C88C8B626066BA6006D9562 /* Main.storyboard */,
 				2C88C8B926066BA6006D9562 /* Assets.xcassets */,
 				2C88C8BB26066BA6006D9562 /* Info.plist */,
@@ -139,6 +142,7 @@
 				2C88C8B326066BA6006D9562 /* GameScene.swift in Sources */,
 				2C88C8B526066BA6006D9562 /* GameViewController.swift in Sources */,
 				2C88C8AD26066BA6006D9562 /* AppDelegate.swift in Sources */,
+				2CF95F27260778D200C18D27 /* Island.swift in Sources */,
 				2C88C8C726067467006D9562 /* Background.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
