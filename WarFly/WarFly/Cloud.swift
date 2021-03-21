@@ -8,19 +8,15 @@
 import SpriteKit
 import GameplayKit
 
-protocol GameBackgroundSpriteable{
-    static func popularSprite(at point: CGPoint) -> Self
-}
-
 final class Cloud: SKSpriteNode, GameBackgroundSpriteable {
     
-    static func popularSprite(at point: CGPoint) -> Cloud {
+    static func populate() -> Cloud {
         let cloudName = configName()
         let cloud = Cloud(imageNamed: cloudName)
         cloud.setScale(randomScaleFactor)
-        cloud.position = point
+        cloud.position = randomPoint()
         cloud.zPosition = 10
-        cloud.run(move(from: point))
+        cloud.run(move(from: cloud.position))
         
         return cloud
     }
@@ -44,7 +40,7 @@ final class Cloud: SKSpriteNode, GameBackgroundSpriteable {
     private static func move(from point: CGPoint) -> SKAction {
         let movePoint = CGPoint(x: point.x, y: -200)
         let moveDistance = point.y + 200
-        let movementSpeed: CGFloat = 15.0
+        let movementSpeed: CGFloat = 100.0
         let duration = moveDistance / movementSpeed
         
         return SKAction.move(to: movePoint, duration: TimeInterval(duration))

@@ -15,6 +15,7 @@
 		2C88C8C726067467006D9562 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C88C8C626067467006D9562 /* Background.swift */; };
 		2CDEBE6E2607B32700DC9788 /* PlayerPlane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDEBE6D2607B32700DC9788 /* PlayerPlane.swift */; };
 		2CDEBE712607B5C700DC9788 /* PlayerPlane.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2CDEBE702607B5C700DC9788 /* PlayerPlane.atlas */; };
+		2CDEBE752607C3E000DC9788 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDEBE742607C3E000DC9788 /* Protocols.swift */; };
 		2CF95F27260778D200C18D27 /* Island.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF95F26260778D200C18D27 /* Island.swift */; };
 		2CF95F2A260790E700C18D27 /* Cloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF95F29260790E700C18D27 /* Cloud.swift */; };
 /* End PBXBuildFile section */
@@ -30,6 +31,7 @@
 		2C88C8C626067467006D9562 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
 		2CDEBE6D2607B32700DC9788 /* PlayerPlane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerPlane.swift; sourceTree = "<group>"; };
 		2CDEBE702607B5C700DC9788 /* PlayerPlane.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = PlayerPlane.atlas; sourceTree = "<group>"; };
+		2CDEBE742607C3E000DC9788 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		2CF95F26260778D200C18D27 /* Island.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Island.swift; sourceTree = "<group>"; };
 		2CF95F29260790E700C18D27 /* Cloud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cloud.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,6 +73,7 @@
 				2C88C8C626067467006D9562 /* Background.swift */,
 				2CF95F26260778D200C18D27 /* Island.swift */,
 				2CF95F29260790E700C18D27 /* Cloud.swift */,
+				2CDEBE742607C3E000DC9788 /* Protocols.swift */,
 				2C88C8B626066BA6006D9562 /* Main.storyboard */,
 				2C88C8B926066BA6006D9562 /* Assets.xcassets */,
 				2CDEBE702607B5C700DC9788 /* PlayerPlane.atlas */,
@@ -156,6 +159,7 @@
 				2C88C8AD26066BA6006D9562 /* AppDelegate.swift in Sources */,
 				2CF95F27260778D200C18D27 /* Island.swift in Sources */,
 				2C88C8C726067467006D9562 /* Background.swift in Sources */,
+				2CDEBE752607C3E000DC9788 /* Protocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -19,21 +19,21 @@ class GameScene: SKScene {
     
     override func didMove(to view: SKView) {
 
+        configStartScene()
+        spawnClouds()
+        spawnIsland()
+    }
+    
+    private func configStartScene() {
         let centerPoint = CGPoint(x: self.size.width / 2, y: self.size.height / 2)
         let background = Background.populateBackground(at: centerPoint)
         self.addChild(background)
         
+        let island = Island.populate()
+        self.addChild(island)
         
-        for _ in 1...5 {
-            let x = CGFloat(GKRandomSource.sharedRandom().nextInt(upperBound: Int(screen.size.width)))
-            let y = CGFloat(GKRandomSource.sharedRandom().nextInt(upperBound: Int(screen.size.height)))
-            
-            let island = Island.popularSprite(at: CGPoint(x: x, y: y))
-            self.addChild(island)
-            
-            let cloud = Cloud.popularSprite(at: CGPoint(x: x, y: y))
-            self.addChild(cloud)
-        }
+        let cloud = Cloud.populate()
+        self.addChild(cloud)
         
         player = PlayerPlane.populate(at: CGPoint(x: screen.size.width / 2, y: 100))
         self.addChild(player)
@@ -45,6 +45,30 @@ class GameScene: SKScene {
                 self.xAcceleration = CGFloat(acceleration.x) * 0.7 + self.xAcceleration * 0.3
             }
         }
+    }
+    
+    private func spawnClouds() {
+        let spawnCloudWait = SKAction.wait(forDuration: 1)
+        let spawnCloudAction = SKAction.run {
+            let cloud = Cloud.populate()
+            self.addChild(cloud)
+        }
+        
+        let spawnCloudSequence = SKAction.sequence([ spawnCloudWait, spawnCloudAction])
+        let spawnCloudForever = SKAction.repeatForever(spawnCloudSequence)
+        self.run(spawnCloudForever)
+    }
+    
+    private func spawnIsland() {
+        let spawnIslandWait = SKAction.wait(forDuration: 2)
+        let spawnIslandAction = SKAction.run {
+            let island = Island.populate()
+            self.addChild(island)
+        }
+        
+        let spawnIslandSequence = SKAction.sequence([ spawnIslandWait, spawnIslandAction])
+        let spawnIslandForever = SKAction.repeatForever(spawnIslandSequence)
+        self.run(spawnIslandForever)
     }
     
     override func didSimulatePhysics() {
