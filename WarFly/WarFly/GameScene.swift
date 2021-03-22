@@ -53,10 +53,12 @@ class GameScene: SKScene {
             let cloud = Cloud.populate()
             self.addChild(cloud)
         }
-        
+
+
         let spawnCloudSequence = SKAction.sequence([ spawnCloudWait, spawnCloudAction])
         let spawnCloudForever = SKAction.repeatForever(spawnCloudSequence)
         self.run(spawnCloudForever)
+       
     }
     
     private func spawnIsland() {
@@ -80,6 +82,12 @@ class GameScene: SKScene {
             player.position.x = self.size.width + 70
         } else if player.position.x > self.size.width + 70 {
             player.position.x = -70
+        }
+        
+        enumerateChildNodes(withName: "backgroundSprite") { (node, _) in
+            if node.position.y < -150 {
+                node.removeFromParent()
+            }
         }
     }
 }
