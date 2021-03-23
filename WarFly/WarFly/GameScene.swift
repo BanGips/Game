@@ -20,21 +20,34 @@ class GameScene: SKScene {
         spawnClouds()
         spawnIsland()
         player.performFly()
+        spawnPowerUp()
+        spawnSpiralOfEnemies()
         
+    }
+    
+    private func spawnSpiralOfEnemies() {
+        let enemyTextureAtlas = SKTextureAtlas(named: "Enemy_1")
+        SKTextureAtlas.preloadTextureAtlases([enemyTextureAtlas]) {
+            Enemy.textureAtlast = enemyTextureAtlas
+            let waitAction = SKAction.wait(forDuration: 1.5)
+            let spawnEnemy = SKAction.run {
+                let enemy = Enemy()
+                enemy.position = CGPoint(x: self.size.width / 2, y: self.size.height + 110)
+                self.addChild(enemy)
+                enemy.flySpiral()
+            }
+            
+            let spawnAction = SKAction.sequence([waitAction, spawnEnemy])
+            let repeatAction = SKAction.repeat(spawnAction, count: 5)
+            self.run(repeatAction)
+        }
+    }
+    
+    private func spawnPowerUp() {
         let powerUp = PowerUp()
         powerUp.performRotation()
         powerUp.position = CGPoint(x: self.size.width / 2, y: self.size.height / 2)
         self.addChild(powerUp)
-        
-        let enemyTextureAtlas = SKTextureAtlas(named: "Enemy_1")
-        SKTextureAtlas.preloadTextureAtlases([enemyTextureAtlas]) {
-            Enemy.textureAtlast = enemyTextureAtlas
-            let enemy = Enemy()
-            enemy.position = CGPoint(x: self.size.width / 2, y: self.size.height * 2 / 3)
-            self.addChild(enemy)
-            
-        }
-        
     }
     
     private func configStartScene() {
@@ -84,8 +97,8 @@ class GameScene: SKScene {
         
         player.checkPosition()
         
-        enumerateChildNodes(withName: "backgroundSprite") { (node, _) in
-            if node.position.y < -150 {
+        enumerateChildNodes(withName: "sprite") { (node, _) in
+            if node.position.y < -100 {
                 node.removeFromParent()
             }
         }
