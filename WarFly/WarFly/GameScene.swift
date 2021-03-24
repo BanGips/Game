@@ -154,7 +154,15 @@ class GameScene: SKScene {
 extension GameScene: SKPhysicsContactDelegate {
     
     func didBegin(_ contact: SKPhysicsContact) {
-        print(#function)
+        
+        let contactCategory: BitMaskCategory = [contact.bodyA.category, contact.bodyB.category]
+        
+        switch contactCategory {
+        case [.enemy, .player]: print(123)
+        case [.powerUp, .player]: print(1123)
+        case [.enemy, .shot]: print(123)
+        default: preconditionFailure()
+        }
     }
     
     func didEnd(_ contact: SKPhysicsContact) {
