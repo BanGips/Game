@@ -10,7 +10,7 @@ import SpriteKit
 class Shot: SKSpriteNode {
  
     let screenSize = UIScreen.main.bounds
-    let initialSize = CGSize(width: 100, height: 100)
+    let initialSize = CGSize(width: 187, height: 237)
     let textureAtlas: SKTextureAtlas!
     var animationSpriteArray = [SKTexture]()
     var textureNameBeginsWith = ""
@@ -21,7 +21,7 @@ class Shot: SKSpriteNode {
         let texture = textureAtlas.textureNamed(textureName)
         textureNameBeginsWith = String(textureName.dropLast(6))
         super.init(texture: texture, color: .clear, size: initialSize)
-        self.setScale(0.7)
+        self.setScale(0.3)
         self.name = "shotSprite"
         self.zPosition = 20
     }
