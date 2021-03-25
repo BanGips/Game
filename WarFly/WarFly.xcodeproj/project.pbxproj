@@ -33,6 +33,7 @@
 		2CDEBE712607B5C700DC9788 /* PlayerPlane.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2CDEBE702607B5C700DC9788 /* PlayerPlane.atlas */; };
 		2CDEBE752607C3E000DC9788 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDEBE742607C3E000DC9788 /* Protocols.swift */; };
 		2CE0288C260C8E2D003DD982 /* ButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE0288B260C8E2D003DD982 /* ButtonNode.swift */; };
+		2CE0288F260C953F003DD982 /* PauseScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE0288E260C953F003DD982 /* PauseScene.swift */; };
 		2CF95F27260778D200C18D27 /* Island.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF95F26260778D200C18D27 /* Island.swift */; };
 		2CF95F2A260790E700C18D27 /* Cloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF95F29260790E700C18D27 /* Cloud.swift */; };
 /* End PBXBuildFile section */
@@ -66,6 +67,7 @@
 		2CDEBE702607B5C700DC9788 /* PlayerPlane.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = PlayerPlane.atlas; sourceTree = "<group>"; };
 		2CDEBE742607C3E000DC9788 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		2CE0288B260C8E2D003DD982 /* ButtonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonNode.swift; sourceTree = "<group>"; };
+		2CE0288E260C953F003DD982 /* PauseScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseScene.swift; sourceTree = "<group>"; };
 		2CF95F26260778D200C18D27 /* Island.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Island.swift; sourceTree = "<group>"; };
 		2CF95F29260790E700C18D27 /* Cloud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cloud.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -177,6 +179,7 @@
 				2C075AE8260B47D300AA96BF /* MenuScene.swift */,
 				2C88C8B226066BA6006D9562 /* GameScene.swift */,
 				2CB9E6F1260C853E002C08E8 /* HUD.swift */,
+				2CE0288E260C953F003DD982 /* PauseScene.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				2C88C8C726067467006D9562 /* Background.swift in Sources */,
 				2C356D272609E0B700C761B9 /* PowerUp.swift in Sources */,
 				2C075AE9260B47D300AA96BF /* MenuScene.swift in Sources */,
+				2CE0288F260C953F003DD982 /* PauseScene.swift in Sources */,
 				2CB9E6F2260C853E002C08E8 /* HUD.swift in Sources */,
 				2C075ADA260B298700AA96BF /* Shot.swift in Sources */,
 				2CDEBE752607C3E000DC9788 /* Protocols.swift in Sources */,
