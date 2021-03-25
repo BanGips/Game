@@ -13,6 +13,8 @@ class GameScene: SKScene {
     
     let screen = UIScreen.main.bounds
     var player: PlayerPlane!
+    let hud = HUD()
+    
     let scoreBaclground = SKSpriteNode(imageNamed: "scores")
     let scoreLabel = SKLabelNode(text: "1000")
     let menuButton = SKSpriteNode(imageNamed: "menu")
@@ -30,37 +32,14 @@ class GameScene: SKScene {
         player.performFly()
         spawnPowerUp()
         spanwEnemies()
-        setupUI()
+        createHUD()
         
         
     }
     
-    private func setupUI() {
-        scoreBaclground.position = CGPoint(x: scoreBaclground.size.width + 10, y: self.size.height - scoreBaclground.size.height / 2 - 10)
-        scoreBaclground.anchorPoint = CGPoint(x: 1.0, y: 0.5)
-        scoreBaclground.zPosition = 99
-        self.addChild(scoreBaclground)
-        
-        scoreLabel.horizontalAlignmentMode = .right
-        scoreLabel.verticalAlignmentMode = .center
-        scoreLabel.position = CGPoint(x: -10, y: 3)
-        scoreLabel.zPosition = 100
-        scoreLabel.fontName = "AmericanTypewriter-Bold"
-        scoreLabel.fontSize = 30
-        scoreBaclground.addChild(scoreLabel)
-        
-        menuButton.position = CGPoint(x: 20, y: 20)
-        menuButton.anchorPoint = CGPoint(x: 0.0, y: 0.0)
-        menuButton.zPosition = 100
-        self.addChild(menuButton)
-        
-        let lifes = [life1, life2, life3]
-        for (index, life) in lifes.enumerated() {
-            life.position = CGPoint(x: self.size.width - CGFloat(index + 1) * (life.size.width + 3), y: 20)
-            life.zPosition = 100
-            life.anchorPoint = CGPoint(x: 0.0, y: 0.0)
-            self.addChild(life)
-        }
+    private func createHUD() {
+        self.addChild(hud)
+        hud.configureUI(screenSize: screen.size)
     }
     
     private func spawnSpiralOfEnemies() {

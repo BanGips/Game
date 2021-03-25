@@ -26,6 +26,7 @@
 		2C88C8B826066BA6006D9562 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C88C8B626066BA6006D9562 /* Main.storyboard */; };
 		2C88C8BA26066BA6006D9562 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C88C8B926066BA6006D9562 /* Assets.xcassets */; };
 		2C88C8C726067467006D9562 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C88C8C626067467006D9562 /* Background.swift */; };
+		2CB9E6F2260C853E002C08E8 /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9E6F1260C853E002C08E8 /* HUD.swift */; };
 		2CD79EA1260B4F2E00CB6900 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CD79EA0260B4F2E00CB6900 /* Launch Screen.storyboard */; };
 		2CD79EA5260B585400CB6900 /* BitMaskCategoty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD79EA4260B585400CB6900 /* BitMaskCategoty.swift */; };
 		2CDEBE6E2607B32700DC9788 /* PlayerPlane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDEBE6D2607B32700DC9788 /* PlayerPlane.swift */; };
@@ -57,6 +58,7 @@
 		2C88C8B926066BA6006D9562 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C88C8BB26066BA6006D9562 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C88C8C626067467006D9562 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
+		2CB9E6F1260C853E002C08E8 /* HUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUD.swift; sourceTree = "<group>"; };
 		2CD79EA0260B4F2E00CB6900 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		2CD79EA4260B585400CB6900 /* BitMaskCategoty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitMaskCategoty.swift; sourceTree = "<group>"; };
 		2CDEBE6D2607B32700DC9788 /* PlayerPlane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerPlane.swift; sourceTree = "<group>"; };
@@ -110,10 +112,40 @@
 			isa = PBXGroup;
 			children = (
 				2C88C8AC26066BA6006D9562 /* AppDelegate.swift */,
-				2C075AE8260B47D300AA96BF /* MenuScene.swift */,
-				2C88C8B226066BA6006D9562 /* GameScene.swift */,
-				2CDEBE6D2607B32700DC9788 /* PlayerPlane.swift */,
+				2CB9E6F8260C8668002C08E8 /* Scenes */,
+				2CB9E6F4260C85E7002C08E8 /* Controllers */,
+				2CB9E6F6260C8649002C08E8 /* Classes */,
+				2CB9E6F7260C8659002C08E8 /* Managers */,
+				2CB9E6F5260C8602002C08E8 /* Protocols */,
+				2C075AD8260B295F00AA96BF /* Atlases */,
+				2C88C8B626066BA6006D9562 /* Main.storyboard */,
+				2CD79EA0260B4F2E00CB6900 /* Launch Screen.storyboard */,
+				2C88C8B926066BA6006D9562 /* Assets.xcassets */,
+				2C88C8BB26066BA6006D9562 /* Info.plist */,
+			);
+			path = WarFly;
+			sourceTree = "<group>";
+		};
+		2CB9E6F4260C85E7002C08E8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
 				2C88C8B426066BA6006D9562 /* GameViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2CB9E6F5260C8602002C08E8 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				2CDEBE742607C3E000DC9788 /* Protocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		2CB9E6F6260C8649002C08E8 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				2CDEBE6D2607B32700DC9788 /* PlayerPlane.swift */,
 				2C075AC32609F89900AA96BF /* Enemy.swift */,
 				2C356D262609E0B700C761B9 /* PowerUp.swift */,
 				2C075ACF260B20AB00AA96BF /* BluePoweUp.swift */,
@@ -123,16 +155,27 @@
 				2CF95F29260790E700C18D27 /* Cloud.swift */,
 				2C075AD9260B298700AA96BF /* Shot.swift */,
 				2C075ADC260B2B1600AA96BF /* YellowShot.swift */,
-				2C075AE4260B35CA00AA96BF /* Assets.swift */,
-				2CDEBE742607C3E000DC9788 /* Protocols.swift */,
-				2CD79EA4260B585400CB6900 /* BitMaskCategoty.swift */,
-				2C075AD8260B295F00AA96BF /* Atlases */,
-				2C88C8B626066BA6006D9562 /* Main.storyboard */,
-				2CD79EA0260B4F2E00CB6900 /* Launch Screen.storyboard */,
-				2C88C8B926066BA6006D9562 /* Assets.xcassets */,
-				2C88C8BB26066BA6006D9562 /* Info.plist */,
 			);
-			path = WarFly;
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		2CB9E6F7260C8659002C08E8 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				2C075AE4260B35CA00AA96BF /* Assets.swift */,
+				2CD79EA4260B585400CB6900 /* BitMaskCategoty.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		2CB9E6F8260C8668002C08E8 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				2C075AE8260B47D300AA96BF /* MenuScene.swift */,
+				2C88C8B226066BA6006D9562 /* GameScene.swift */,
+				2CB9E6F1260C853E002C08E8 /* HUD.swift */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,6 +269,7 @@
 				2C88C8C726067467006D9562 /* Background.swift in Sources */,
 				2C356D272609E0B700C761B9 /* PowerUp.swift in Sources */,
 				2C075AE9260B47D300AA96BF /* MenuScene.swift in Sources */,
+				2CB9E6F2260C853E002C08E8 /* HUD.swift in Sources */,
 				2C075ADA260B298700AA96BF /* Shot.swift in Sources */,
 				2CDEBE752607C3E000DC9788 /* Protocols.swift in Sources */,
 			);
