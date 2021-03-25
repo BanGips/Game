@@ -11,6 +11,8 @@ import CoreMotion
 
 class GameScene: SKScene {
     
+    let sceneManager = SceneManager.shared
+    
     let screen = UIScreen.main.bounds
     var player: PlayerPlane!
     let hud = HUD()
@@ -24,8 +26,12 @@ class GameScene: SKScene {
     
     override func didMove(to view: SKView) {
 
+        guard sceneManager.gameScene == nil else { return }
+        sceneManager.gameScene = self
+        
         physicsWorld.contactDelegate = self
         physicsWorld.gravity = .zero
+        
         configStartScene()
         spawnClouds()
         spawnIsland()
