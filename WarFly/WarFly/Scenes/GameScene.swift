@@ -25,10 +25,9 @@ class GameScene: SKScene {
     let life3 = SKSpriteNode(imageNamed: "life")
     
     override func didMove(to view: SKView) {
-
-        guard sceneManager.gameScene == nil else { return }
-        sceneManager.gameScene = self
         
+        guard sceneManager.gameScene == nil else { return }
+
         physicsWorld.contactDelegate = self
         physicsWorld.gravity = .zero
         
@@ -175,6 +174,8 @@ class GameScene: SKScene {
             let transition = SKTransition.doorway(withDuration: 1.0)
             let pauseScene = PauseScene(size: self.size)
             pauseScene.scaleMode = .aspectFill
+            self.scene?.isPaused = true
+            sceneManager.gameScene = self
             self.scene?.view?.presentScene(pauseScene, transition: transition)
         } else {
             playerFire()
