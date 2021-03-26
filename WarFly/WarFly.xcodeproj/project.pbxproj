@@ -19,6 +19,8 @@
 		2C075AE2260B2E8100AA96BF /* YellowShot.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2C075AE1260B2E8100AA96BF /* YellowShot.atlas */; };
 		2C075AE5260B35CA00AA96BF /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C075AE4260B35CA00AA96BF /* Assets.swift */; };
 		2C075AE9260B47D300AA96BF /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C075AE8260B47D300AA96BF /* MenuScene.swift */; };
+		2C0EE726260E0E9100BF4B8C /* ParentScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0EE725260E0E9100BF4B8C /* ParentScene.swift */; };
+		2C0EE729260E10E400BF4B8C /* OptionsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0EE728260E10E400BF4B8C /* OptionsScene.swift */; };
 		2C356D272609E0B700C761B9 /* PowerUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C356D262609E0B700C761B9 /* PowerUp.swift */; };
 		2C88C8AD26066BA6006D9562 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C88C8AC26066BA6006D9562 /* AppDelegate.swift */; };
 		2C88C8B326066BA6006D9562 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C88C8B226066BA6006D9562 /* GameScene.swift */; };
@@ -52,6 +54,8 @@
 		2C075AE1260B2E8100AA96BF /* YellowShot.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = YellowShot.atlas; sourceTree = "<group>"; };
 		2C075AE4260B35CA00AA96BF /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		2C075AE8260B47D300AA96BF /* MenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
+		2C0EE725260E0E9100BF4B8C /* ParentScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentScene.swift; sourceTree = "<group>"; };
+		2C0EE728260E10E400BF4B8C /* OptionsScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsScene.swift; sourceTree = "<group>"; };
 		2C356D262609E0B700C761B9 /* PowerUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerUp.swift; sourceTree = "<group>"; };
 		2C88C8A926066BA6006D9562 /* WarFly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WarFly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C88C8AC26066BA6006D9562 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -183,6 +187,8 @@
 				2C88C8B226066BA6006D9562 /* GameScene.swift */,
 				2CE0288E260C953F003DD982 /* PauseScene.swift */,
 				2CB9E6F1260C853E002C08E8 /* HUD.swift */,
+				2C0EE725260E0E9100BF4B8C /* ParentScene.swift */,
+				2C0EE728260E10E400BF4B8C /* OptionsScene.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -279,11 +285,13 @@
 				2C88C8C726067467006D9562 /* Background.swift in Sources */,
 				2C356D272609E0B700C761B9 /* PowerUp.swift in Sources */,
 				2C075AE9260B47D300AA96BF /* MenuScene.swift in Sources */,
+				2C0EE726260E0E9100BF4B8C /* ParentScene.swift in Sources */,
 				2CE0288F260C953F003DD982 /* PauseScene.swift in Sources */,
 				2CB9E6F2260C853E002C08E8 /* HUD.swift in Sources */,
 				2C075ADA260B298700AA96BF /* Shot.swift in Sources */,
 				2CDEBE752607C3E000DC9788 /* Protocols.swift in Sources */,
 				2CE0288C260C8E2D003DD982 /* ButtonNode.swift in Sources */,
+				2C0EE729260E10E400BF4B8C /* OptionsScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

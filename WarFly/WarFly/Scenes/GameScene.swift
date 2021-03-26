@@ -9,9 +9,7 @@ import SpriteKit
 import GameplayKit
 import CoreMotion
 
-class GameScene: SKScene {
-    
-    let sceneManager = SceneManager.shared
+class GameScene: ParentScene {
     
     let screen = UIScreen.main.bounds
     var player: PlayerPlane!

@@ -7,7 +7,7 @@
 
 import SpriteKit
 
-class MenuScene: SKScene {
+class MenuScene: ParentScene {
 
     override func didMove(to view: SKView) {
         if !Assets.shared.isLoaded {
@@ -16,10 +16,7 @@ class MenuScene: SKScene {
         }
         
         self.backgroundColor = SKColor(red: 0.15, green: 0.15, blue: 0.3, alpha: 1.0)
-        
-        let header = SKSpriteNode(imageNamed: "header1")
-        header.position = CGPoint(x: self.frame.midX, y: self.frame.midY + 150)
-        self.addChild(header)
+        setHeader(with: nil, andBackground: "header1")
         
         let titles = [ "play", "options", "best"]
         
@@ -42,6 +39,12 @@ class MenuScene: SKScene {
             let gameScene = GameScene(size: self.size)
             gameScene.scaleMode = .aspectFill
             self.scene?.view?.presentScene(gameScene, transition: transition)
+        } else if node.name == "options" {
+            let transition = SKTransition.crossFade(withDuration: 1.0)
+            let optionScene = OptionsScene(size: self.size)
+            optionScene.backScene = self
+            optionScene.scaleMode = .aspectFill
+            self.scene?.view?.presentScene(optionScene, transition: transition)
         }
     }
 }
