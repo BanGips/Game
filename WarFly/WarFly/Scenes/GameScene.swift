@@ -185,12 +185,29 @@ extension GameScene: SKPhysicsContactDelegate {
     
     func didBegin(_ contact: SKPhysicsContact) {
         
+        let explosion = SKEmitterNode(fileNamed: "EnemyExplosion")
+        explosion?.position = contact.contactPoint
+        let wait = SKAction.wait(forDuration: 1.0)
+        
         let contactCategory: BitMaskCategory = [contact.bodyA.category, contact.bodyB.category]
         
         switch contactCategory {
-        case [.enemy, .player]: print(123)
+        case [.enemy, .player]:
+            if contact.bodyA.node?.name == "sprite" {
+                contact.bodyA.node?.removeFromParent()
+            } else {
+                contact.bodyB.node?.removeFromParent()
+            }
+            
+            self.addChild(explosion!)
+            self.run(wait) { explosion?.removeFromParent() }
         case [.powerUp, .player]: print(1123)
-        case [.enemy, .shot]: print(123)
+        case [.enemy, .shot]:
+            contact.bodyA.node?.removeFromParent()
+            contact.bodyB.node?.removeFromParent()
+            
+            self.addChild(explosion!)
+            self.run(wait) { explosion?.removeFromParent() }
         default: preconditionFailure()
         }
     }
